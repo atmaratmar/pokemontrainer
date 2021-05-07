@@ -21,5 +21,4 @@ export class SelectedPokemonService{
     public contact():Pokemon | null{
         return this._contact;
   }
-
 }

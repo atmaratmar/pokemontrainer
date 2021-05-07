@@ -1,8 +1,6 @@
 import { Component} from '@angular/core'
-import { Pokemon  } from '../models/pokemon.model';
-
+import { Pokemon  } from '../models/pokemon.model'
 import { SelectedPokemonService } from '../services/pokemon-contact.service';
-
 @Component({
     selector: 'app-contac-selected',
     templateUrl:'./pokemon-selected.component.html',
@@ -20,6 +18,7 @@ export class PokemonSelectedCompnent{
     public Name() {
    return localStorage.getItem('username');
   }
+
 }
 
 

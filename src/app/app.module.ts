@@ -10,10 +10,7 @@ import { AppRoutnigMudule } from './app-routing.module';
 import { ContactCreatePage } from './contact-create/contact-create.page';
 import { Header } from './header/header';
 import { ContactPage } from './pkoemons/pokemons.page';
-
-
-
-
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +19,8 @@ import { ContactPage } from './pkoemons/pokemons.page';
     PokemonListItemComponent,
     ContactCreatePage,
     Header,
-    ContactPage
+    ContactPage,
+    ProfileComponent
 
 
   ],
