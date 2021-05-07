@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>create new contacts</h1>
+  <form #createForm ="ngForm" (ngSubmit)="onSubmit(createForm)">
+    <fieldset>
+      <label class="form-lable" for="name">Name</label>
+      <input class="form-control "type="text" id="name" name="name" ngModel #name="ngModel" required placeholder="insert name here" />
+    </fieldset>
+    <button type="submit"
+    [disabled]="createForm.invalid"
+    class="btn btn-primary">Add user</button>
+  </form>
+
+
+</div>
+

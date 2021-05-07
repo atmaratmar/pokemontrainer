@@ -1,0 +1,24 @@
+{
+ "contacts": [
+     {
+        "id":1,
+        "avatar" : "https://avatars.dicebear.com/api/male/atmar.svg",
+        "name" : "atmar",
+        "email":"atmar@hotmail.dk",
+        "phone": "42424242",
+        "address": {
+            "street": "7b odinsvej",
+            "city" : "hong",
+            "country": "denmark"
+        },
+        
+            "deleted":false,
+            "createdat":1620038469829
+        
+         }
+
+        ]
+       
+    
+ 
+}
