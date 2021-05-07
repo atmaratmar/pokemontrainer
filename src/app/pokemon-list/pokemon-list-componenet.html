@@ -1,9 +1,9 @@
 
 <ul class="pokemon-list">
-    <app-contact-list-item *ngFor="let contact of contacts  "
+    <app-pokemon-list-item *ngFor="let pokemon of pokemons  "
     (clicked)="handleContactClick($event)"
-    [contact]="contact " >
-  </app-contact-list-item>
+    [pokemon]="pokemon " >
+  </app-pokemon-list-item>
 </ul>
 <div>
 

@@ -1,16 +1,16 @@
 import { Component} from '@angular/core'
 import { Pokemon  } from '../models/pokemon.model'
-import { SelectedPokemonService } from '../services/pokemon-contact.service';
+import { SelectedPokemonService } from '../services/pokemon-pokemon.service';
 @Component({
-    selector: 'app-contac-selected',
+    selector: 'app-pokemon-selected',
     templateUrl:'./pokemon-selected.component.html',
     styleUrls : ['./pokemon-selected.component.css']
 })
 export class PokemonSelectedCompnent{
-  constructor(private readonly selectedContactService: SelectedPokemonService) {
+  constructor(private readonly selectedPokemonService: SelectedPokemonService) {
   }
-    get contact(): Pokemon|null{
-        return this.selectedContactService.contact()
+    get pokemon(): Pokemon|null{
+        return this.selectedPokemonService.pokemon()
   }
   public getdata() {
   return  JSON.parse(localStorage.getItem('pokemon'));

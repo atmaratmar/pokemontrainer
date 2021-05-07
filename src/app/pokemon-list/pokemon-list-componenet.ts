@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core'
 import { Pokemon } from '../models/pokemon.model';
 import { PokemonsService } from '../services/pokemon.service';
-import { SelectedPokemonService } from '../services/pokemon-contact.service';
+import { SelectedPokemonService } from '../services/pokemon-pokemon.service';
 import { Router } from '@angular/router';
 @Component({
-    selector:'app-contact-list',
+    selector:'app-pokemon-list',
     templateUrl:'./pokemon-list-componenet.html',
     styleUrls:['./pokemon-list-componenet.css']
 })
@@ -13,18 +13,18 @@ export class PokemonListComponent implements OnInit{
   page = 1;
   totalpokemons : number
     private _error : string='';
-    constructor(private readonly contactService: PokemonsService,
-        private readonly selectedContactService: SelectedPokemonService
+    constructor(private readonly pokemontService: PokemonsService,
+        private readonly selectedPokemonService: SelectedPokemonService
         ) {
 
   }
 
      ngOnInit(): void{
-    this.contactService.getPokemons()
+    this.pokemontService.getPokemons()
       .subscribe((response: any) => {
         this.totalpokemons = response.count;
         response.results.forEach((result: { name: string; }) => {
-          this.contactService.getMoreData(result.name)
+          this.pokemontService.getMoreData(result.name)
             .subscribe((response: any) => {
               this._pokemons.push(response);
               console.log(this._pokemons)
@@ -34,11 +34,11 @@ export class PokemonListComponent implements OnInit{
   }
 
 
-    get contacts(): Pokemon[]{
+    get pokemons(): Pokemon[]{
         return this._pokemons
     }
     handleContactClick(pokemon : Pokemon):void{
-      this.selectedContactService.setContact(pokemon)
+      this.selectedPokemonService.setPokemon(pokemon)
   }
 
 }

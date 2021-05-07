@@ -8,7 +8,7 @@ import {Pokemon} from '../models/pokemon.model'
 
 export class PokemonsService{
 
-  private _contacts: Pokemon[] = []
+  private _pokemon: Pokemon[] = []
     private _error : string='';
 
 
@@ -24,8 +24,8 @@ export class PokemonsService{
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
   }
 
-    public Contacts():Pokemon[]{
-        return this._contacts;
+    public Pokemon():Pokemon[]{
+        return this._pokemon;
     }
     public error(): string{
         return this._error

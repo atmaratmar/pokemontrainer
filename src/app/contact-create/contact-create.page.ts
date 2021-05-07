@@ -17,13 +17,12 @@ export class ContactCreatePage  implements OnInit{
 
   }
 ngOnInit(): void {
-  if (localStorage.getItem('username') !== null) {
-         this.router.navigate(['/pokemon']);
-   }
-  else {
-         this.router.navigate(['/create']);
+  if (localStorage.getItem('username') !== null||"") {
+         this.router.navigate(['pokemon']);
   }
-
+  else {
+    this.router.navigate(['pokemon']);
+  }
   }
 
 }

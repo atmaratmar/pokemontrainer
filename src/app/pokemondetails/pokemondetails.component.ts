@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon  } from '../models/pokemon.model'
-import { SelectedPokemonService } from '../services/pokemon-contact.service';
+import { SelectedPokemonService } from '../services/pokemon-pokemon.service';
 
 @Component({
   selector: 'app-pokemondetails',
@@ -8,10 +8,10 @@ import { SelectedPokemonService } from '../services/pokemon-contact.service';
   styleUrls: ['./pokemondetails.component.css']
 })
 export class PokemondetailsComponent implements OnInit {
-constructor(private readonly selectedContactService: SelectedPokemonService) {
+constructor(private readonly selectedPokemonService: SelectedPokemonService) {
   }
     get contact(): Pokemon|null{
-        return this.selectedContactService.contact()
+        return this.selectedPokemonService.pokemon()
   }
   public getdata() {
   return  JSON.parse(localStorage.getItem('pokemon'));
