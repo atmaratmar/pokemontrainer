@@ -1,4 +1,4 @@
-export interface Contact{
+export interface Pokemon{
     user:string,
     name: string,
     sprites:string,

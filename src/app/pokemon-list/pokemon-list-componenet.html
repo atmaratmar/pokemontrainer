@@ -1,14 +1,5 @@
 
-<section>
-<a rol="button" class="btn btn-primary" routerLink="/create">login</a>
-</section>
-<section>
-  <a rol="button" class="btn btn-primary" routerLink="create/contacts">list</a>
-</section>
-<section>
-  <a rol="button" class="btn btn-primary" routerLink="/create/selected"> profile</a>
-</section>
-<ul class="contact-list">
+<ul class="pokemon-list">
     <app-contact-list-item *ngFor="let contact of contacts"
     (clicked)="handleContactClick($event)"
     [contact]="contact">

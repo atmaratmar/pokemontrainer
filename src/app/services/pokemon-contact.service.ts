@@ -1,14 +1,14 @@
 import {Injectable}from '@angular/core'
-import { Contact } from '../models/pokemon.model';
+import { Pokemon } from '../models/pokemon.model';
 
 @Injectable({
     providedIn : 'root'
 })
-export class SelectedContactService{
+export class SelectedPokemonService{
     public _storage : string []=[]
-    private _contacts : Contact [] = []
-    private _contact  : Contact |null =null;
-    public setContact(contact : Contact){
+    private _contacts : Pokemon [] = []
+    private _contact  : Pokemon |null =null;
+    public setContact(contact : Pokemon){
        this._contact = contact;
       this._contacts.push(this._contact)
 
@@ -18,7 +18,7 @@ export class SelectedContactService{
 
     }
 
-    public contact():Contact | null{
+    public contact():Pokemon | null{
         return this._contact;
   }
 

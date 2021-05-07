@@ -1,18 +1,18 @@
 import {Component, OnInit} from '@angular/core'
-import { Contact } from '../models/pokemon.model';
-import { ContactsService } from '../services/pokemon.service';
-import { SelectedContactService } from '../services/pokemon-contact.service';
+import { Pokemon } from '../models/pokemon.model';
+import { PokemonsService } from '../services/pokemon.service';
+import { SelectedPokemonService } from '../services/pokemon-contact.service';
 
 @Component({
     selector:'app-contact-list',
     templateUrl:'./pokemon-list-componenet.html',
     styleUrls:['./pokemon-list-componenet.css']
 })
-export class ContactListComponent implements OnInit{
-    private _contacts : Contact [] = []
+export class PokemonListComponent implements OnInit{
+    private _pokemons : Pokemon [] = []
     private _error : string='';
-    constructor(private readonly contactService: ContactsService,
-        private readonly selectedContactService: SelectedContactService
+    constructor(private readonly contactService: PokemonsService,
+        private readonly selectedContactService: SelectedPokemonService
         ) {
 
     }
@@ -22,19 +22,19 @@ export class ContactListComponent implements OnInit{
         response.results.forEach((result: { name: string; }) => {
           this.contactService.getMoreData(result.name)
             .subscribe((response: any) => {
-              this._contacts.push(response);
-              console.log(this._contacts)
+              this._pokemons.push(response);
+              console.log(this._pokemons)
             });
         });
       });
   }
 
 
-    get contacts(): Contact[]{
-        return this._contacts
+    get contacts(): Pokemon[]{
+        return this._pokemons
     }
-    handleContactClick(contact : Contact):void{
-      this.selectedContactService.setContact(contact)
+    handleContactClick(pokemon : Pokemon):void{
+      this.selectedContactService.setContact(pokemon)
     }
 
 }

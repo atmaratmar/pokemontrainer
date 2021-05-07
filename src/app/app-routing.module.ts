@@ -1,8 +1,8 @@
 import { NgModule}from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import { ContactCreatePage } from './contact-create/contact-create.page'
-import { ContactSelectedCompnent } from './pokemon-selected/pokemon-selected.component'
-import { ContactPage } from './contacts/contacts.page'
+import { PokemonSelectedCompnent } from './pokemon-selected/pokemon-selected.component'
+import { ContactPage } from './pkoemons/pokemons.page'
 
 
 
@@ -24,7 +24,7 @@ const routes : Routes = [
   }
  ,{
   path :'create/selected',
-  component : ContactSelectedCompnent
+  component : PokemonSelectedCompnent
 }
 ]
 @NgModule({

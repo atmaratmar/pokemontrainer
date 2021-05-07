@@ -3,22 +3,28 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
-import { ContactListComponent } from './pokemon-list/pokemon-list-componenet';
-import { ContactSelectedCompnent } from './pokemon-selected/pokemon-selected.component';
-import { ContactListItemComponent } from './pokemon-list-item/pokemon-list-item.component';
-import { ContactPage } from './contacts/contacts.page';
+import { PokemonListComponent } from './pokemon-list/pokemon-list-componenet';
+import { PokemonSelectedCompnent } from './pokemon-selected/pokemon-selected.component';
+import { PokemonListItemComponent } from './pokemon-list-item/pokemon-list-item.component';
 import { AppRoutnigMudule } from './app-routing.module';
 import { ContactCreatePage } from './contact-create/contact-create.page';
+import { Header } from './header/header';
+import { ContactPage } from './pkoemons/pokemons.page';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactListComponent,
-    ContactSelectedCompnent,
-    ContactListItemComponent,
-    ContactPage,
-    ContactCreatePage
+    PokemonListComponent,
+    PokemonSelectedCompnent,
+    PokemonListItemComponent,
+    ContactCreatePage,
+    Header,
+    ContactPage
+
+
   ],
   imports: [
     BrowserModule,

@@ -1,14 +1,14 @@
 import {Injectable} from '@angular/core'
 import {HttpClient,HttpErrorResponse} from '@angular/common/http'
-import {Contact} from '../models/pokemon.model'
+import {Pokemon} from '../models/pokemon.model'
 
 @Injectable({
     providedIn: 'root'
 })
 
-export class ContactsService{
+export class PokemonsService{
 
-  private _contacts: Contact[] = []
+  private _contacts: Pokemon[] = []
     private _error : string='';
 
 
@@ -24,7 +24,7 @@ export class ContactsService{
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
   }
 
-    public Contacts():Contact[]{
+    public Contacts():Pokemon[]{
         return this._contacts;
     }
     public error(): string{
