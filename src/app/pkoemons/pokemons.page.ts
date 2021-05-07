@@ -5,6 +5,6 @@ import {Component} from '@angular/core'
     templateUrl : './pokemons.page.html',
     styleUrls : ['./pokemons.page.css']
 })
-export class ContactPage{
+export class PokemonPage{
 
 }

@@ -9,7 +9,10 @@
                 <h1>Logged in</h1> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                 <br>
                 <br>
-                <h6 class="f-w-600">{{Name()}}</h6>
+                <h3 class="f-w-600">{{Name()}}</h3>
+                <br>
+                <br>
+                 <button (click)="onSubmit()">Logout</button>
               </div>
             </div>
             <div class="col-sm-8">
@@ -20,7 +23,7 @@
                     <p class="m-b-10 f-w-600">Recent</p>
                   </div>
                 </div>
-                <app-contac-selected></app-contac-selected>
+                <app-pokemondetails></app-pokemondetails>
               </div>
             </div>
           </div>

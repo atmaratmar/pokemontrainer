@@ -1,5 +1,6 @@
 
-    <div class="contact-list-item" (click)="oncontactClicked()">
+    <div class="contact-list-item" >
         <h4 class="contact-list-item_name">{{contact?.name}}</h4>
        <img src="{{contact?.sprites.back_default}}" alt="">
+      <button type="button" class="btn btn-outline-dark"  (click)="oncontactClicked()">Collect</button>
     </div>

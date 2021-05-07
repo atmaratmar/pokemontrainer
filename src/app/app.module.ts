@@ -9,9 +9,11 @@ import { PokemonListItemComponent } from './pokemon-list-item/pokemon-list-item.
 import { AppRoutnigMudule } from './app-routing.module';
 import { ContactCreatePage } from './contact-create/contact-create.page';
 import { Header } from './header/header';
-import { ContactPage } from './pkoemons/pokemons.page';
+import { PokemonPage } from './pkoemons/pokemons.page';
 import { ProfileComponent } from './profile/profile.component';
-import {NgxPaginationModule} from 'ngx-pagination'
+import {NgxPaginationModule} from 'ngx-pagination';
+import { NavbarComponent } from './navbar/navbar.component';
+import { PokemondetailsComponent } from './pokemondetails/pokemondetails.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,8 +22,10 @@ import {NgxPaginationModule} from 'ngx-pagination'
     PokemonListItemComponent,
     ContactCreatePage,
     Header,
-    ContactPage,
-    ProfileComponent
+    PokemonPage,
+    ProfileComponent,
+    NavbarComponent,
+    PokemondetailsComponent
 
 
   ],

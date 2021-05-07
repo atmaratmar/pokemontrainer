@@ -2,7 +2,7 @@ import { NgModule}from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import { ContactCreatePage } from './contact-create/contact-create.page'
 import { PokemonSelectedCompnent } from './pokemon-selected/pokemon-selected.component'
-import { ContactPage } from './pkoemons/pokemons.page'
+import { PokemonPage } from './pkoemons/pokemons.page'
 import { ProfileComponent } from './profile/profile.component'
 import { UserGuard } from './user.guard'
 
@@ -23,7 +23,7 @@ const routes : Routes = [
   },
 
   {
-   path :'contacts', component : ContactPage , canActivate:[UserGuard]
+   path :'pokemon', component : PokemonPage , canActivate:[UserGuard]
   }
  ,{
   path :'selected', component : PokemonSelectedCompnent , canActivate:[UserGuard]

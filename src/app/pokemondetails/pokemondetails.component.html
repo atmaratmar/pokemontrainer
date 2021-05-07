@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="column" *ngFor="let contact of getdata() ">
+    <img class="img" src="{{contact?.sprites.back_default}}" alt="">
+    <h6 class="height">Height</h6>
+    <p class="height">{{contact.height}}</p>
+    <h6>Name</h6>
+    <p>{{contact.name}}</p>
+    <div>
+      <h6>Abilities</h6>
+          <p>{{contact.abilities[0].ability.name}}</p>
+    </div>
+    <div>
+      <h6 class="moves">Moves</h6>
+      <p class="move">{{contact.moves[0].move.name}}</p>
+      <p class="move">{{contact.moves[1].move.name}}</p>
+      <p class="move">{{contact.moves[2].move.name}}</p>
+      <p class="move">{{contact.moves[3].move.name}}</p>
+    </div>
+  </div>
+</div>
