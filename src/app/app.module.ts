@@ -11,6 +11,7 @@ import { ContactCreatePage } from './contact-create/contact-create.page';
 import { Header } from './header/header';
 import { ContactPage } from './pkoemons/pokemons.page';
 import { ProfileComponent } from './profile/profile.component';
+import {NgxPaginationModule} from 'ngx-pagination'
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { ProfileComponent } from './profile/profile.component';
     BrowserModule,
     HttpClientModule,
     AppRoutnigMudule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

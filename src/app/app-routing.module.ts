@@ -4,6 +4,7 @@ import { ContactCreatePage } from './contact-create/contact-create.page'
 import { PokemonSelectedCompnent } from './pokemon-selected/pokemon-selected.component'
 import { ContactPage } from './pkoemons/pokemons.page'
 import { ProfileComponent } from './profile/profile.component'
+import { UserGuard } from './user.guard'
 
 
 
@@ -12,25 +13,24 @@ const routes : Routes = [
   {
     path :'',
     pathMatch:'full',
-    redirectTo : '/create'
+    redirectTo : 'create'
 
   }
   ,
  {
  path: 'create',
    component:ContactCreatePage
-},{
-  path :'contacts',
-  component : ContactPage
+  },
+
+  {
+   path :'contacts', component : ContactPage , canActivate:[UserGuard]
   }
  ,{
-  path :'selected',
-  component : PokemonSelectedCompnent
+  path :'selected', component : PokemonSelectedCompnent , canActivate:[UserGuard]
   }
- ,{
-  path :'profile',
-  component : ProfileComponent
-}
+  , {
+   path :'profile', component : ProfileComponent , canActivate:[UserGuard]
+ }
 ]
 @NgModule({
   imports :[RouterModule.forRoot(routes) ],

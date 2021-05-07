@@ -10,10 +10,7 @@ import {Router} from '@angular/router'
 export class ContactCreatePage {
   constructor(private readonly router: Router ) {
   }
-
   goToPage() {
-
-
      if(localStorage.getItem('username')!==null){
      this.router.navigate(['/contacts']);
     }
