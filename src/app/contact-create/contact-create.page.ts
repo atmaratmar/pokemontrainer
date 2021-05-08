@@ -24,6 +24,5 @@ ngOnInit(): void {
     this.router.navigate(['pokemon']);
   }
   }
-
 }
 
