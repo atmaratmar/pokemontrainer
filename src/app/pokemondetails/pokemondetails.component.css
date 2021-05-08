@@ -1,6 +1,9 @@
 /* Three image containers (use 25% for four, and 50% for two, etc) */
+.body {
+  background-color: rgb(235, 204, 164);
+}
 .column {
-  border: 1px solid sandybrown;
+  border: 10px solid rgb(190, 146, 26);
   float: left;
   padding: 1em;
   height: fit-content;
