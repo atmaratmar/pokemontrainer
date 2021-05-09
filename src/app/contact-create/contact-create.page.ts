@@ -15,7 +15,7 @@ export class ContactCreatePage  implements OnInit{
     localStorage.setItem('username', createForm.value.name)
     setTimeout(() => {
       this.onChange()
-    }, 1000);
+    }, 3000);
  this.router.navigate(['/pokemon']);
     //added
   }
