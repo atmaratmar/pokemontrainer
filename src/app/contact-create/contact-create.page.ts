@@ -13,11 +13,11 @@ export class ContactCreatePage  implements OnInit{
   onSubmit(createForm: NgForm): void {
     //store user after submation
     localStorage.setItem('username', createForm.value.name)
-    setTimeout(() => {
+
       if (localStorage.getItem('username') !== null||"") {
          this.router.navigate(['pokemon']);
-  }
-    }, 1000);
+       }
+        this.router.navigate(['pokemon']);
     //added
   }
 
