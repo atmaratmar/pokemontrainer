@@ -11,10 +11,9 @@ export class ContactCreatePage  implements OnInit{
   constructor(private readonly router: Router ) {
   }
   onSubmit(createForm: NgForm): void {
-
     //store user after submation
-  localStorage.setItem('username',createForm.value.name)
-
+    localStorage.setItem('username', createForm.value.name)
+     this.router.navigate(['pokemon']);
   }
 ngOnInit(): void {
   if (localStorage.getItem('username') !== null||"") {
