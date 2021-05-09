@@ -21,7 +21,9 @@ export class ContactCreatePage  implements OnInit{
   }
 
   onChange() {
-  this.router.navigate(['/pokemon']);
+   console.log("redirect")
+    this.router.navigate(['/pokemon']);
+
 }
 
 
