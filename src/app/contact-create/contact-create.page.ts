@@ -14,18 +14,12 @@ export class ContactCreatePage  implements OnInit{
     //store user after submation
     localStorage.setItem('username', createForm.value.name)
     setTimeout(() => {
-      this.onChange()
-    }, 3000);
- this.router.navigate(['/pokemon']);
+      if (localStorage.getItem('username') !== null||"") {
+         this.router.navigate(['pokemon']);
+  }
+    }, 1000);
     //added
   }
-
-  onChange() {
-   console.log("redirect")
-    this.router.navigate(['/pokemon']);
-
-}
-
 
 ngOnInit(): void {
   if (localStorage.getItem('username') !== null||"") {
