@@ -6,7 +6,7 @@ const ngApp = express();
 ngApp.use(express.static("./pokemontrainer"));
 
 ngApp.get("/*", function (request, response) {
-  response.sendFile(path.join(__dirname, "/dist/pokemontrainer/index.html"));
+  response.sendFile(path.join(__dirname, "/data/pokemontrainer/index.html"));
 });
 
 ngApp.listen(process.env.PORT || 8080);
