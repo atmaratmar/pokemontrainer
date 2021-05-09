@@ -13,7 +13,7 @@ export class ContactCreatePage  implements OnInit{
   onSubmit(createForm: NgForm): void {
     //store user after submation
     localStorage.setItem('username', createForm.value.name)
-    this.router.navigate(['pokemon']);
+    this.router.navigate(['/pokemon']);
     //added
   }
 ngOnInit(): void {
@@ -25,4 +25,3 @@ ngOnInit(): void {
   }
   }
 }
-
