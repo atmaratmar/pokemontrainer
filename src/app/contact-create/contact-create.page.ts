@@ -14,6 +14,7 @@ export class ContactCreatePage  implements OnInit{
     //store user after submation
     localStorage.setItem('username', createForm.value.name)
     this.router.navigate(['/pokemon']);
+     window.location.reload();
     //added
   }
 ngOnInit(): void {
