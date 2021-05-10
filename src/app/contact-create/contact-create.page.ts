@@ -14,7 +14,9 @@ export class ContactCreatePage  implements OnInit{
     //store user after submation
      console.log("first")
     localStorage.setItem('username', createForm.value.name)
+    
        console.log("second")
+     this.router.navigate(['pokemon']);
     if (localStorage.getItem('username') !== null || "") {
         console.log('third')
          this.router.navigate(['pokemon']);
